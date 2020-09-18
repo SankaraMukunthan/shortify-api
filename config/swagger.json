@@ -1,0 +1,24 @@
+{
+    "swagger": "2.0",
+    "title": "Shortify API documentation",
+    "description": "API documentation for url shortener application",
+    "license": {
+      "name": "MIT",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.1",
+    "host": "localhost:5000",
+    "basePath": "/api",
+    "tags":[
+        {
+            "name" : "Urls",
+            "description" : "Api for url"
+        }
+    ],
+    "schemes":["http"],
+    "consumes":["application/json"],
+    "produces":["application/json"],
+    "paths":{
+        "/urls":{}
+    }
+  }

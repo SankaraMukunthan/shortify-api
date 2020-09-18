@@ -1,0 +1,4 @@
+{
+    "mongoUri" : "mongodb+srv://ranoAdmin:%23QFODSVt8@shortify.q99ud.mongodb.net/shortify?retryWrites=true&w=majority",
+    "baseUrl" : "http://localhost:5000"
+}
