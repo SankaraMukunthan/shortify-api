@@ -1,4 +1,10 @@
 {
     "mongoUri" : "mongodb+srv://ranoAdmin:%23QFODSVt8@shortify.q99ud.mongodb.net/shortify?retryWrites=true&w=majority",
-    "baseUrl" : "http://localhost:5000"
+    "baseUrl" : "http://localhost:5000",
+    "ethereal": {
+        "username" : "graham93@ethereal.email",
+        "password" : "AEs3MreN64NUrgPCGb",
+        "host": "smtp.ethereal.email",
+        "port": 587
+    }
 }

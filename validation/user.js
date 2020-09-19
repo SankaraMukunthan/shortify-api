@@ -29,6 +29,19 @@ const userValidation = {
         }
         return {value};
 
+    },
+    forgotPasswordValidation(body){
+        const schema = joi.object().keys({
+            emailId :joi.string().email().required(),
+
+        });
+        const {error, value} = schema.validate(body);
+        if(error && error.details){
+            return {error};
+
+        }
+        return {value};
+
     }
 }
 
