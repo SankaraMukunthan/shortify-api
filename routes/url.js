@@ -11,7 +11,6 @@ router.post('/shorten',passport.authenticate(
     'jwt', {session: false}
 ), urlController.createShortenUrl );
 
-router.get('/',passport.authenticate(
-    'jwt',{session: false}
-    ), urlController.findAllByUser);
+
+router.get('/', urlController.findAllByUser);
 module.exports = router;

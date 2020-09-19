@@ -6,7 +6,12 @@ const { INTERNAL_SERVER_ERROR } = require('http-status-codes');
 
 const urlController = {
     async findAllByUser (req,res) {
-        Url.find().then(urls => res.json(urls)).catch(err => res.status(INTERNAL_SERVER_ERROR).json(err));
+        const {page =1, perPage=10}= req.query;
+        const options = {
+            page: parseInt(page, 10),
+            limit: parseInt(perPage, 10),
+        }
+        Url.paginate({}, options).then(urls => res.json(urls)).catch(err => res.status(INTERNAL_SERVER_ERROR).json(err));
     },
     async createShortenUrl (req,res) {
         const {longUrl}= req.body;

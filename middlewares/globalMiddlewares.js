@@ -12,7 +12,7 @@ const setGlobalMiddleware= app => {
 //middlewares
 app.use(helmet());
 app.use(morgan('tiny'));
-app.use(cors());
+app.use(cors({origin:'*'}));
 app.use(passport.initialize());
 configureJwtStrategy();
 app.use(express.json());
